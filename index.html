@@ -6,17 +6,17 @@
     <title>FruitCard Odyssey</title>
     <link rel="stylesheet" href="Quiz.css">
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0BT0S586R"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1M0DBR98XC"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
     
-      gtag('config', 'G-W0BT0S586R');
+      gtag('config', 'G-1M0DBR98XC');
     </script>
 </head>
 <body>
-    <div class="wrapper-main">
+    <!-- <div class="wrapper-main">
         <div id="home" class="flex-center flex-column">
         <header>
             <img src="Banner.svg" style="max-width: 100%;">
@@ -30,10 +30,65 @@
         <p>
             <img src="Thumbnail.gif" style="max-width: 100%;">
         </p>
+        
         <div class="begin-quiz-container">
             <button id="begin-quiz">Begin Quiz</button>
         </div>
+    </div> -->
+
+    <!--//edit first page-->
+    <div class="wrapper-main">
+        <div id="home" class="flex-center flex-column">
+        <header>
+            <img src="Banner.svg" style="max-width: 100%;">
+        </header>
+        <h3>
+            Discover your true flavor!
+        </h3>
+        <h4>
+            A donkey personality quiz inspired by Nice the donkey master.
+        </h4>
+        <p>
+            <img src="Thumbnail.gif" style="max-width: 100%;">
+        </p>
+        
+        <form class="justify-center flex-column" id="sheet_form">
+            <div class="begin-quiz-container">
+                <input type="text" name="data[name]" id="nameField" placeholder="What's your name?">
+            </div>
+            <div class="begin-quiz-container">
+                <input name="data[age]" id="ageField" type="number" class="name" placeholder="How old are you?">
+            </div>
+            <div class="begin-quiz-container">
+                <input name="data[email]" id="emailField" type="text" class="name" placeholder="E-mail (optional)">
+            </div>
+            <div class="begin-quiz-container">
+                <button id="begin-quiz" type="button">Begin Quiz</button>
+            </div>
+        </form>
+            
+        </div>
     </div>
+
+    <!-- personal info
+    <div class = "personal_info" id="personal_info", style="display: none;">
+        <div id = "info_quiz" class ="flex-center flex-column">
+            <h2 id="personal">personal info</h2>
+            <form class="w3-container" action="https://sheetdb.io/api/v1/5vq2j0cj957bt?sheet=test_donkey" method="post" id="sheet_form">
+
+                <label>Name</label>
+                <input class="w3-input" name="data[name]"  id="nameField" type="text">
+                
+                <label>Age</label>
+                <input class="w3-input" name="data[age]" id="ageField" type="text">
+                
+                <div class="begin-quiz-container"></div>
+                    <button id="send_info" onclick="sendInputData()">Send</button>
+            </div>
+            </form>
+        </div>
+    </div> -->
+
     <!--Quiz-Page-->
     <div class="quiz-page" id="quiz-page" style= "display: none;">
         <div id="quiz" class="justify-center flex-column">
@@ -46,6 +101,25 @@
         </div>
 
     <div>
+
+    <!-- Send data button
+    <div class="wrapper-main">
+        <div id="home" class="flex-center flex-column">
+        <header>
+            <img src="Banner.svg" style="max-width: 100%;">
+        </header>
+        <h3>
+            Your result is ready!
+        </h3>
+        <p>
+            <img src="Thumbnail.gif" style="max-width: 100%;">
+        </p>
+        
+        <div class="begin-quiz-container">
+            <button id="show-result">Show my result</button>
+        </div>
+    </div>    -->
+
         <!--Results Page-->
         <div id="results" style="display: none;">
             <h1>You are ...</h1>
@@ -66,5 +140,6 @@
     </div>
     </div>
     <script src="FruitQuiz.js"></script>
+    
 </body>
 </html>

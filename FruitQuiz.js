@@ -1,106 +1,106 @@
 function displayQuiz() {
     const questions = [
         {
-            question: "You've been mysteriously invited to an unfamiliar realm known as Fruitville, accessible only within your dreams. The invitation expires tonight.",
-            choices: ["I don't know, seems risky", "Sounds fun, let's go on an adventure"],
+            question: "What will you do when meet someone at the first time?",
+            choices: ["Observing from distance place", "Sounds fun, let's get closing to him and bite him"],
             weights: [
                 {judgingScore: +3, perceivingScore: 0 }, // Weight for first choice
                 {perceivingScore: +1, judgingScore:0 }, // Weight for second choice
             ]
         },
         {
-            question: "You drift into a deep slumber after a long day. All of a sudden, the sweet scent of fruits start to fill the air.",
-            choices: ["Where is the smell coming from?", "Am I in Fruitville"],
+            question: "On the rainy day what is the best thing for you?",
+            choices: ["I don't think I have to answer this.", "Waiting for rain to stop, so I can going out and sniffing grass"],
             weights: [
                 {thinkingScore: +1, feelingScore: 0 }, // Weight for first choice
                 {feelingScore: +3, thinkingScore: 0 } // Weight for second choice
             ]
         },
         {
-            question: "You open your eyes and see that you’re in Fruitville. It’s a sunny morning in Fruitville and fruits are getting ready to start their day. An apple approaches you...",
-            choices: ["This is crazy, I’m dreaming for sure!", "I wonder if there will be any new fruits"],
+            question: "Which one will you choose?",
+            choices: ["Galloping around meeting room.", "Wondering how the room will gallop around you."],
             weights: [
                 {intuitionScore: +3, sensingScore: 0 } , // Weight for first choice
                 {sensingScore: +1, intuitionScore: 0 } , // Weight for second choice
             ]
         },
         {
-            question: "The apple introduces itself as the Mayor of Fruitville.  “Will you be joining us for the FruitFest at noon? It’s an event meant to welcome newcomers and tourists. And yes, there will be plenty of food!",
-            choices: ["“Of course!”", "“I’ll think about it..”"],
+            question: "What is the best creature?",
+            choices: ["I'm not sure. Every creature has some good points...", "DON DON DON DONKEY!!!"],
             weights: [
                 {perceivingScore: +1, judgingScore: 0 } , // Weight for first choice
                 {judgingScore: +3, perceivingScore: 0 }, // Weight for second choice
             ]
         },
         {
-            question: "As you finish your conversation with the Mayor, you can't help but wonder..",
-            choices: ["What food will there be?", "Do fruits eat fruits?"],
+            question: "If you can have one special ability, which one do you think it was suit to you.",
+            choices: ["Reading others mind", "Having cute fluffy ear <3"],
             weights: [
                 {sensingScore: +1, intuitionScore: 0 } , // Weight for first choice
                 {intuitionScore: +3, sensingScore: 0 } , // Weight for second choice
             ]
         },
+        // {
+        //     question:"While wandering Fruitville, you notice nobody questioning a human among the fruits. Looking down, you see your limbs, but realize fruits also have their own…",
+        //     choices: ["Am I still a human?", "Am I a fruit?"],
+        //     weights: [
+        //         {thinkingScore: +1, feelingScore: 0 } , // Weight for first choice
+        //         {feelingScore: +3, thinkingScore: 0 } , // Weight for second choice
+        //     ]
+        // },
+        // {
+        //     question:"As you stroll along,  your stomach starts to rumble. At that moment, the town clock rings for noon and you decide to head for the FruitFest",
+        //     choices: ["I’ll make sure to bring some cash for the food stalls", "I can’t wait to explore the culture of Fruitville"],
+        //     weights: [
+        //         {sensingScore: +1, intuitionScore: 0 } , // Weight for first choice
+        //         {intuitionScore: +3, sensingScore: 0 } , // Weight for intuition 
+        //     ]
+        // },
         {
-            question:"While wandering Fruitville, you notice nobody questioning a human among the fruits. Looking down, you see your limbs, but realize fruits also have their own…",
-            choices: ["Am I still a human?", "Am I a fruit?"],
-            weights: [
-                {thinkingScore: +1, feelingScore: 0 } , // Weight for first choice
-                {feelingScore: +3, thinkingScore: 0 } , // Weight for second choice
-            ]
-        },
-        {
-            question:"As you stroll along,  your stomach starts to rumble. At that moment, the town clock rings for noon and you decide to head for the FruitFest",
-            choices: ["I’ll make sure to bring some cash for the food stalls", "I can’t wait to explore the culture of Fruitville"],
-            weights: [
-                {sensingScore: +1, intuitionScore: 0 } , // Weight for first choice
-                {intuitionScore: +3, sensingScore: 0 } , // Weight for intuition 
-            ]
-        },
-        {
-            question:"You’ve enjoyed your time at the FruitFest, but your time at Fruitville is coming to an end. How do you want to spend your last few minutes at Fruitville?",
-            choices: ["I need some time alone to process", "I want to socialize and make the most of my visit"],
+            question:"Today is donkey ceremony, what should you do?",
+            choices: ["Think about how cute donkey is in your place", "Going out and enjoy ceremony"],
             weights: [
                 {introvertScore: +1, extrovertScore: 0 } , // Weight for first choice
                 {extrovertScore: +3, introvertScore: 0 } , // Weight for second choice
             ]
         },
+        // {
+        //     question:"As you prepare to leave Fruitville, the Mayor expresses gratitude for visiting and tells you that your FruitCard will arrive in the mail soon.",
+        //     choices: ["Finally! That was a strange experience", "Was I a fruit the entire time? I feel so confused"],
+        //     weights: [
+        //         {thinkingScore: +3, feelingScore: 0 } , // Weight for first choice
+        //         {feelingScore: +1, thinkingScore: 0 } , // Weight for second choice
+        //     ]
+        // },
+        // {
+        //     question:"While you slowly drift back to reality, memories of your time in Fruitville flood your mind.",
+        //     choices: ["I can’t stop thinking about the details of what happened", "I feel bittersweet and reminisce about my experience"],
+        //     weights: [
+        //         {thinkingScore: +3, feelingScore: 0 } , // Weight for first choice
+        //         {feelingScore: +1, thinkingScore: 0 } , // Weight for second choice
+        //     ]
+        // },
+        // {
+        //     question:"You awaken from your nap on the couch and see that it’s almost time for dinner. Just then, you get a message from a friend asking you to join them for dinner.",
+        //     choices: ["Let’s go! I need to tell a friend about my dream", "Have dinner at home and relax instead"],
+        //     weights: [
+        //         {extrovertScore: +3, introvertScore: 0 } , // Weight for first choice
+        //         {introvertScore: +1, extrovertScore: 0 } , // Weight for second choice
+        //     ]
+        // },
+        // {
+        //     question:"The next day you hear a ring at your door, your FruitCard has arrived with a letter that says I’m welcome to visit again.",
+        //     choices: ["I’m already ready to visit again!", "I’ll think about visiting again"],
+        //     weights: [
+        //         {perceivingScore: +3, judgingScore: 0 } , // Weight for first choice
+        //         {judgingScore: +1, perceivingScore: 0 } , // Weight for second choice
+        //     ]
+        // },
         {
-            question:"As you prepare to leave Fruitville, the Mayor expresses gratitude for visiting and tells you that your FruitCard will arrive in the mail soon.",
-            choices: ["Finally! That was a strange experience", "Was I a fruit the entire time? I feel so confused"],
+            question: "Processing your answer...",
+            choices: ["Collect my Result!"],
             weights: [
-                {thinkingScore: +3, feelingScore: 0 } , // Weight for first choice
-                {feelingScore: +1, thinkingScore: 0 } , // Weight for second choice
-            ]
-        },
-        {
-            question:"While you slowly drift back to reality, memories of your time in Fruitville flood your mind.",
-            choices: ["I can’t stop thinking about the details of what happened", "I feel bittersweet and reminisce about my experience"],
-            weights: [
-                {thinkingScore: +3, feelingScore: 0 } , // Weight for first choice
-                {feelingScore: +1, thinkingScore: 0 } , // Weight for second choice
-            ]
-        },
-        {
-            question:"You awaken from your nap on the couch and see that it’s almost time for dinner. Just then, you get a message from a friend asking you to join them for dinner.",
-            choices: ["Let’s go! I need to tell a friend about my dream", "Have dinner at home and relax instead"],
-            weights: [
-                {extrovertScore: +3, introvertScore: 0 } , // Weight for first choice
-                {introvertScore: +1, extrovertScore: 0 } , // Weight for second choice
-            ]
-        },
-        {
-            question:"The next day you hear a ring at your door, your FruitCard has arrived with a letter that says I’m welcome to visit again.",
-            choices: ["I’m already ready to visit again!", "I’ll think about visiting again"],
-            weights: [
-                {perceivingScore: +3, judgingScore: 0 } , // Weight for first choice
-                {judgingScore: +1, perceivingScore: 0 } , // Weight for second choice
-            ]
-        },
-        {
-            question: "Processing your FruitCard...",
-            choices: ["Collect my Fruitcard!"],
-            weights: [
-                {extrovertScore: 0, introvertScore: 0 }, // laceholder
+                {extrovertScore: 0, introvertScore: 0 }, // Placeholder
                 {introvertScore: 0, extrovertScore: 0}, //Placeholder
             ]
         },
@@ -118,6 +118,22 @@ function displayQuiz() {
     let thinkingScore = 0;
     let feelingScore = 0;
 
+    // Store personal info variables globally
+    let userName, userAge, userEmail, mbtiTypeString;
+
+
+    document.getElementById('begin-quiz').addEventListener('click', function(event) {
+
+        // Prevent default form submission
+        event.preventDefault();
+
+        userName = document.getElementById('nameField').value;
+        userAge = document.getElementById('ageField').value;
+        userEmail = document.getElementById('emailField').value;
+
+        document.getElementById('home').style.display = 'none';
+        document.getElementById('quiz-page').style.display = 'block';
+    });
 
     function displayQuestionImage(questionIndex) {
         const imageURLs = [
@@ -127,22 +143,80 @@ function displayQuiz() {
             "Q4.png",
             "Q5.png",
             "Q6.png",
-            "Q7.png",
-            "Q8.png",
-            "Q9.png",
-            "Q10.png",
-            "Q11.png",
-            "Q12.png",
+            // "Q7.png",
+            // "Q8.png",
+            // "Q9.png",
+            // "Q10.png",
+            // "Q11.png",
+            // "Q12.png",
             "processing.GIF",
         ];
         const questionImageElement = document.getElementById('question-image');
         questionImageElement.src = imageURLs[questionIndex];
     }
 
-    document.getElementById('begin-quiz').addEventListener('click', function() {
-        document.getElementById('home').style.display = 'none';
-        document.getElementById('quiz-page').style.display = 'block';
-    });
+    function submitResultToSheet() {
+
+        // Create a date object for the current date and time
+        const now = new Date();
+
+        // Format the date to your preference (e.g., YYYY-MM-DD)
+        const quizDate = now.toISOString().split('T')[0]; // YYYY-MM-DD
+        const quizTime = now.toLocaleTimeString(); // HH:MM:SS AM/PM
+
+        const data = {
+            data: {
+                date: quizDate,
+                time: quizTime,
+                name: userName,
+                age: userAge,
+                email: userEmail,
+                result: mbtiTypeString
+            }
+        };
+    
+        // Send data using fetch to SheetDB
+        fetch("https://sheetdb.io/api/v1/5vq2j0cj957bt?sheet=test_donkey", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        // .then(data => {
+        //     console.log('Success:', data);
+        //     alert("Data submitted successfully!");
+        // })
+        // .catch((error) => {
+        //     console.error('Error:', error);
+        //     alert("There was an error sending the data.");
+        // });
+    }
+    
+
+
+
+    // // Store Name and Age from the personal info form
+    // function storePersonalInfo() {
+    //     userName = document.getElementById('nameField').value;
+    //     userAge = document.getElementById('ageField').value;
+
+    //     // After storing personal info, show the quiz page
+    //     document.getElementById('personal_info').style.display = 'none';
+    //     document.getElementById('quiz-page').style.display = 'block';
+    // }
+
+    // document.getElementById('begin-quiz').addEventListener('click', function() {
+    //     document.getElementById('home').style.display = 'none';
+    //     document.getElementById('personal_info').style.display = 'block';
+    // });
+
+    // document.getElementById('send_info').addEventListener('click', function(){
+    //     document.getElementById('personal_info').style.display = 'none';
+    //     document.getElementById('quiz-page').style.display = 'block';
+    // });
+
 
     //Function to display the current question and choices
     function displayCurrentQuestion() {
@@ -177,12 +251,12 @@ function displayQuiz() {
             "Q4 progress.svg",
             "Q5 progress.svg",
             "Q6 progress.svg",
-            "Q7 progress.svg",
-            "Q8 progress.svg",
-            "Q9 progress.svg",
-            "Q10 progress.svg",
-            "Q11 progress.svg",
-            "Q12 progress.svg",
+            // "Q7 progress.svg",
+            // "Q8 progress.svg",
+            // "Q9 progress.svg",
+            // "Q10 progress.svg",
+            // "Q11 progress.svg",
+            // "Q12 progress.svg",
         ];
         return progressImageURLs[questionIndex] || "";
     }
@@ -227,6 +301,7 @@ function displayQuiz() {
                 displayCurrentQuestion();
             } else {
                 calculateMBTITypeAndDisplayImage();
+                submitResultToSheet();
             }
         }
         
@@ -242,7 +317,7 @@ function displayQuiz() {
         //Calculate judging/perceiving dimension
         const judgeper = judgingScore > perceivingScore ? "J" : "P";
         //Produce MBTI type string
-        const mbtiTypeString = introextro + sensint + thinkfeel + judgeper;
+        mbtiTypeString = introextro + sensint + thinkfeel + judgeper;
 
         console.log("MBTI Type:", mbtiTypeString);
 
@@ -266,22 +341,22 @@ function displayQuiz() {
     //Function to calculate MBTI type and return image URL 
         function getMBTIImageUrl(mbtiTypeString) {
             const MBTIImageUrls = {
-                "ENTJ": "Lemon.png",
-                "INTJ": "Pomegranate.png", 
-                "ENTP": "Dragon Fruit.png",
-                "INTP": "Grape.png",
-                "ENFJ": "Peach.png",
-                "INFJ": "Fig.png",
-                "ENFP": "Watermelon.png",
-                "INFP": "Cherry.png",
-                "ESFJ": "Orange.png",
-                "ISFJ": "Apple.png",
-                "ESTJ": "Banana.png",
-                "ISTJ": "Pear.png",
-                "ESTP": "Pineapple.png",
-                "ISTP": "Coconut.png",
-                "ESFP": "Mango.png",
-                "ISFP": "Strawberry.png",
+                "ENTJ": "human.png",
+                "INTJ": "donkey.png", 
+                "ENTP": "human.png",
+                "INTP": "mule.png",
+                "ENFJ": "human.png",
+                "INFJ": "human.png",
+                "ENFP": "human.png",
+                "INFP": "mule.png",
+                "ESFJ": "human.png",
+                "ISFJ": "mule.png",
+                "ESTJ": "human.png",
+                "ISTJ": "mule.png",
+                "ESTP": "human.png",
+                "ISTP": "mule.png",
+                "ESFP": "human.png",
+                "ISFP": "donkey.png",
             };
             return MBTIImageUrls[mbtiTypeString] || ""
         }
