@@ -107,18 +107,6 @@ header img {
     margin-top: 10px;
 }
 
-.row {
-    display: flex;
-    margin-bottom: 10px;
-}
-.column {
-    flex: 1;
-    margin-right: 10px;
-}
-.column:last-child {
-    margin-right: 0; /* Remove margin for the last column */
-}
-
 
 /*BUTTONS*/
 .button-container {
@@ -131,7 +119,6 @@ header img {
     display: flex;
     justify-content: center; /* Horizontally center the button */
     align-items: center; /* Vertically center the button */
-    margin-top: 10px;
 }
 
 #begin-quiz {
